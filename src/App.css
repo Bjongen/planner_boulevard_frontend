@@ -6,26 +6,150 @@
   height: 40vmin;
   pointer-events: none;
 }
+.NavBar{
+  position: sticky;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+}
+/*navbar*/
+.navColaps:hover{
+  height: 300px;
+}
+.navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.1rem 2rem;
+  background: var(--offWhite);
+  z-index: 1;
+  box-shadow: 0px 1px 10px gray;
+}
+.nav-header {
+  display: none;
+  justify-content: space-between;
+}
+
+.nav-icon {
+  font-size: 1.5rem;
+  color: var(--primaryColor);
+}
+
+.nav-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+.nav-links {
+  height: 0;
+  overflow: hidden;
+  transition: var(--mainTransition);
+  list-style-type: none;
+  margin-top: 8px;
+  width: 100%;
+}
+.profile_icon{
+
+  width: 50px;
+  height: 50px;
+}
+.logo{
+  width: 50px;
+  height: 50px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+
+.nav-links a {
+  display: block;
+  text-decoration: none;
+  padding: 1rem 0;
+  color: var(--mainBlack);
+  transition: var(--mainTransition);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: var(--mainSpacing);
+  text-align: center;
+}
+
+
+.nav-links a:hover {
+  color: var(--primaryColor);
+}
+@media screen and (min-width: 768px) {
+  .nav-btn {
+    display: none;
+  }
+  .nav-center {
+
+    transition: var(--mainTransition);
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+    height: auto;
+
+  }
+
+  .right {
+    position: absolute;
+    float: right;
+    right: 0%;
+  }
+
+  .nav-links {
+    height: auto;
+    display: flex;
+    margin-left: 4rem;
+  }
+  .nav-links a {
+    margin: 0 1rem;
+    padding: 0.5rem 0;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/*End of navbar*/
+
+
+/*Begin Home*/
+.overview{
+  background-color: #222222;
+  display: block;
 }
+
+.left{
+  background-color: #1657ea;
+  width: auto;
+}
+/*End Home*/
+
 
 .App-link {
   color: #61dafb;
+}
+
+:root {
+  --primaryColor: #1657ea;
+  --mainWhite: #fff;
+  --offWhite: #dcdcdc;
+  --mainBlack: #222;
+  --mainGrey: #ececec;
+  --darkGrey: #cfcfcf;
+  --mainTransition: all 0.3s linear;
+  --mainSpacing: 2px;
+}
+
+.translation-container{
+  border: 1px solid black;
+  cursor: pointer;
+  margin-bottom:3rem;
+  max-width:45%;
+  text-overflow: ellipsis;
+}
+
+.link-base{
+  transition: var(--mainTransition);
+  list-style: none;
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +159,38 @@
   to {
     transform: rotate(360deg);
   }
+}
+/*start of overview styling*/
+.table_border__Account{
+  position: relative;
+  top: 5vw;
+  margin-left: 22vw;
+  border-collapse: collapse;
+}
+.table_border__Account td, th{
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding:8px;
+  width:22vw;
+}
+.table_border__Account th {
+  border: 1px solid black;
+}
+.table_border__Account tr {
+  cursor: pointer;
+}
+.table_border__planning {
+  position: relative;
+  top: 5vw;
+  margin-left: 15vw;
+  border-collapse: collapse;
+}
+.table_border__planning td, th{
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding:8px;
+  width:22vw;
+}
+.table_border__planning th {
+  border: 1px solid black;
 }

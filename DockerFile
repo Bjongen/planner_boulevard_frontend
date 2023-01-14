@@ -1,0 +1,7 @@
+FROM node:alpine
+WORKDIR /planner_boulevard_frontend
+COPY package*.json ./
+COPY ./ ./
+RUN npm i
+EXPOSE 3000
+CMD ["npm", "run", "start"]
